@@ -1,4 +1,3 @@
-  
 import React, { Component } from 'react'
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
 
@@ -63,45 +62,54 @@ export default Directory
 
 
 
+
 // import React, { Component } from 'react'
-// import CampsiteInfoComponent from './CampsiteInfoComponent'
 // import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
 
-// class Directory extends Component {
-//   constructor(props){
-//     super(props)
-//     this.state = {
-//       selectedCampsite: null
-//     }
-//   }
+// class CampsiteInfoComponent extends Component {
+// 	renderCampsite(campsite){
+// 		return(
+// 			<div className="col-md-5 m-1">
+// 				<Card onClick={() => this.onCampsiteSelect(campsite)}>
+// 					<CardImg width="100%" src={campsite.image} alt={campsite.name} />
+// 					<CardImgOverlay>
+// 						<CardTitle>{campsite.name}</CardTitle>
+// 					</CardImgOverlay>
+// 				</Card>
+// 			</div>
+// 		)
+// 	}
 
-//   onCampsiteSelect(campsite) {
-//     this.setState({selectedCampsite: campsite});
-//   }
+// 	renderComments(comments){
+// 		if(comments){
+// 			return (
+// 				<div className="col=md=5 m-1">
+// 					<h4>Comments</h4>
+// 					{comments.map(comment => {
+// 						return (
+// 							<div>
+// 								<p>{comment.text}</p>
+// 								<p>--{comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
+// 							</div>
+// 						)					
+// 					})}
+// 				</div>
+// 			)
+// 		}
+// 		return <div/>
+// 	}
 
 //   render() {
-//     const directory = this.props.campsites.map(campsite => {
+//     if(this.props.campsite){
 //       return (
-//         <div key={campsite.id} className="col-md-5 m-1">
-//           <Card onClick={() => this.onCampsiteSelect(campsite)}>
-//             <CardImg width="100%" src={campsite.image} alt={campsite.name} />
-//             <CardImgOverlay>
-//               <CardTitle>{campsite.name}</CardTitle>
-//             </CardImgOverlay>
-//           </Card>
-//         </div>
-//       );
-//     });
-
-//     return (
-//       <div className="container">
-//         <div className="row">
-//           {directory}
-//         </div>
-//         <CampsiteInfoComponent campsite={this.state.selectedCampsite}/>
-//       </div>
-//     );
+// 				<div className="row">
+// 					{this.renderCampsite(this.props.campsite)}
+// 					{this.renderComments(this.props.campsite.comments)}
+// 				</div>
+// 			)
+// 		}   
+// 		return <div/>
 //   }
 // }
 
-// export default Directory
+// export default CampsiteInfoComponent
