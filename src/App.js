@@ -7,9 +7,11 @@ import { CAMPSITES } from './shared/campsites'
 class App extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             campsites: CAMPSITES
         };
+
     }
     render() {
         return (
@@ -19,7 +21,7 @@ class App extends Component {
                     <NavbarBrand href="/">NuCamp</NavbarBrand>
                 </div>
                 </Navbar>
-                <Directory campsites={this.state.campsites}/>
+                <Directory campsites={this.state.campsites} />
             </div>
         );
     }
